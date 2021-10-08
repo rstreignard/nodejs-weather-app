@@ -10,6 +10,7 @@ const forecast = require('./utils/forecast')
 
 const log = console.log
 
+// Init Express
 const app = express()
 
 // Define paths for Express config
