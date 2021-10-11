@@ -1,10 +1,87 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
     {{>header}}
+    <title>{{title}}</title>
 </head>
 <body>
-    <h1>{{title}}</h1>
-    {{>nav}}
+
+<div class="container">
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+            <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
+            <span class="fs-4">Weather Forecast</span>
+        </a>
+        {{>nav}}
+    </header>
+</div>
+
+<div class="container px-4 py-5">
+    <main>
+        <h1>Get started with Bootstrap</h1>
+        <p class="fs-5 col-md-8">Quickly and easily get started with Bootstrap's compiled, production-ready files with this barebones example featuring some basic HTML and helpful links. Download all our examples to get started.</p>
+    </main>
+</div>
+
+<div class="container px-4 py-5" id="custom-cards">
+    <h2 class="pb-2 border-bottom">Popular searches</h2>
+
+    <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+        <div class="col">
+            <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('/img/dublin-unsplash.jpg');">
+                <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                    <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Dublin <span id="cityOneTemperature"></span>°</h2>
+                    <ul class="d-flex list-unstyled mt-auto">
+                    <li class="me-auto">
+                        <span id="cityOneWeatherDesc"></span>
+                        <br> 
+                        Feels like <span id="cityOneFeelsLike"></span>°
+                    </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('/img/tokyo-unsplash.jpg');">
+                <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                    <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Tokyo <span id="cityTwoTemperature"></span>°</h2>
+                    <ul class="d-flex list-unstyled mt-auto">
+                    <li class="me-auto">
+                        <span id="cityTwoWeatherDesc"></span>
+                        <br> 
+                        Feels like <span id="cityTwoFeelsLike"></span>°
+                    </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('/img/singapore-unsplash.jpg');">
+                <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+                    <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Singapore <span id="cityThreeTemperature"></span>°</h2>
+                    <ul class="d-flex list-unstyled mt-auto">
+                    <li class="me-auto">
+                        <span id="cityThreeWeatherDesc"></span>
+                        <br> 
+                        Feels like <span id="cityThreeFeelsLike"></span>°
+                    </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<footer class="footer mt-auto py-3 bg-light">
+    <div class="container">
+        <span class="text-muted">&copy; Weather Forecast <span id="year">2021</span></span>
+    </div>
+</footer>
+
+<script src="/js/script.js"></script>
+
 </body>
 </html>
