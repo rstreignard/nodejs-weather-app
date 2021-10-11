@@ -15,7 +15,7 @@ const cityThreeTemperature = document.querySelector('#cityThreeTemperature')
 const cityThreeWeatherDesc = document.querySelector('#cityThreeWeatherDesc')
 const cityThreeFeelsLike = document.querySelector('#cityThreeFeelsLike')
 
-fetch('http://localhost:3000/weather?address=Dublin').then((response) => {
+fetch('/weather?address=Dublin').then((response) => {
     response.json().then((data) => {
         if (data.error) {
             /* messageOne.textContent = data.error; */
@@ -27,7 +27,7 @@ fetch('http://localhost:3000/weather?address=Dublin').then((response) => {
     })
 })
 
-fetch('http://localhost:3000/weather?address=Tokyo').then((response) => {
+fetch('/weather?address=Tokyo').then((response) => {
     response.json().then((data) => {
         if (data.error) {
             /* messageOne.textContent = data.error; */
@@ -39,7 +39,7 @@ fetch('http://localhost:3000/weather?address=Tokyo').then((response) => {
     })
 })
 
-fetch('http://localhost:3000/weather?address=Singapore').then((response) => {
+fetch('/weather?address=Singapore').then((response) => {
     response.json().then((data) => {
         if (data.error) {
             /* messageOne.textContent = data.error; */
@@ -62,7 +62,7 @@ if (weatherForm) {
         messageOne.textContent = 'Loading...';
         messageTwo.textContent = '';
 
-        fetch('http://localhost:3000/weather?address='+location).then((response) => {
+        fetch('/weather?address='+location).then((response) => {
             response.json().then((data) => {
                 if (data.error) {
                     messageOne.textContent = data.error;
